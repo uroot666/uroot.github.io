@@ -326,6 +326,127 @@
 
 
   
+    <article id="post-Kibana7-Visualize-添加nginx日志展示图形" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/">Kibana7 Visualize 添加nginx日志展示图形</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/" class="archive-article-date">
+  	<time datetime="2019-08-20T06:27:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>使用的Kibana7 fileter的语法与6有点差别</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">log_format json &#39;&#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;time&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;</span><br><span class="line">                     &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;</span><br><span class="line">                     &#39;&quot;status&quot;: &quot;$status&quot;, &#39;</span><br><span class="line">                     &#39;&quot;host&quot;: &quot;$host&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request&quot;: &quot;$request&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;</span><br><span class="line">                     &#39;&quot;uri&quot;: &quot;$request_uri&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot; &#39;</span><br><span class="line">                &#39;&#125;&#39;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>IP总数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metrics --&gt; aggregation 选择 Unique Count --&gt; Field 选择IP字段(remote_addr.keyword) --&gt; Custom label 写字段备注</span><br></pre></td></tr></table></figure>
+
+<p><strong>URL访问前100,排除静态资源地址</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metric --&gt; aggregation 选择 Count</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Feild 选择URL字段(uri.keyword) --&gt; Order by 选择 Count --&gt; Order Size 选择100 --&gt; Custom label 备注填写URL --&gt; Advanced 的 Exclude 排除静态资源 .png|.jpg|.js|.ico|.*css</span><br></pre></td></tr></table></figure>
+
+<p><strong>慢请求(高于5秒的请求)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择count</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram -- Field 选择 time(实际情况而定) -- Minimum interval 选择 Auto --&gt; Split series --&gt; Sub aggregation 选择 Filters --&gt; Filter 1 写条件 &quot;request_time &gt; 5&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>访问IP前100</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metrics --&gt; Aggregation选择Count --&gt; Custom label 写备注&quot;次数&quot;</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Field 选着IP字段&quot;remote_addr.keyword&quot; --&gt; Order by 选择 &quot;Metric:次数&quot; --&gt; Order Size 选100 --&gt; Custom label 备注写&quot;IP&quot;</span><br><span class="line">与上面一行同在一个Buckets--&gt; Split rows --&gt; Sub aggregation 选择 Terms --&gt; Field 选择IP城市字段&quot;geoip.city_name.keyword&quot; 这个是geoip插件解析出来的 --&gt; Order by 选择&quot;Metric:次数&quot; --&gt; Order Size 选择 Descending 100</span><br></pre></td></tr></table></figure>
+
+<p><strong>平均响应时间</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Average --&gt; Field 选择 请求时间字段&quot;request_time&quot; --&gt; Custom label 备注写 平均响应时间</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram --&gt; Field 选择 time(实际情况) --&gt; Minimum interval 选择 Auto</span><br></pre></td></tr></table></figure>
+
+<p><strong>总PV</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metric --&gt; Aggregation 选择 Count --&gt; Custom label 备注写 总PV</span><br></pre></td></tr></table></figure>
+
+<p><strong>总流量</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metric --&gt; Aggregation 选择 Sum --&gt; Field 选择请求大小字段 &quot;body_bytes_sent&quot; --&gt; Custom label标签写 总流量</span><br></pre></td></tr></table></figure>
+
+<p><strong>访问城市前20</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vertical Bar 图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Count --&gt; Custom label 标签写 数量</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Terms --&gt; Field 城市名称字段&quot;geoip_city_name.keyword&quot; --&gt; Order Size 选择 Descending 20 --&gt; Custom label 备注写 &quot;城市&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>访问情况</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Area 图形 </span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Count --&gt; Custom label 标签写 次数 Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram --&gt; Filed 选择 time(根据实际情况) -- Minimum interval 选择 Auto</span><br></pre></td></tr></table></figure>
+
+<p><strong>昨日今日访问对比</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Timelion 图形</span><br><span class="line">语句如下：</span><br><span class="line">.es(index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).title(昨日今日访问对比).color(#1E90FF).label(今日),</span><br><span class="line"></span><br><span class="line">.es(offset&#x3D;-24h,index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).lines(fill&#x3D;1,width&#x3D;0.5).color(gray).label(昨日)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">运维</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ELK</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据分析//" class="article-tag-list-link color5">数据分析</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -424,6 +545,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运维</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ELK</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 运维 | 记录日常 - 万物之中,希望最美。至美之物,永不凋零</title>
+  <title>Kibana7 Visualize 添加nginx日志展示图形 | 记录日常 - 万物之中,希望最美。至美之物,永不凋零</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="记录日常 - 万物之中,希望最美。至美之物,永不凋零">
-<meta property="og:url" content="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/index.html">
+  <meta name="description" content="使用的Kibana7 fileter的语法与6有点差别  123456789101112131415log_format json &#39;&amp;#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;                     &#39;&quot;time&quot;: &quot;$time_iso8601&amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kibana7 Visualize 添加nginx日志展示图形">
+<meta property="og:url" content="http://yoursite.com/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/index.html">
 <meta property="og:site_name" content="记录日常 - 万物之中,希望最美。至美之物,永不凋零">
+<meta property="og:description" content="使用的Kibana7 fileter的语法与6有点差别  123456789101112131415log_format json &#39;&amp;#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;                     &#39;&quot;time&quot;: &quot;$time_iso8601&amp;q">
 <meta property="og:locale" content="cn">
+<meta property="article:published_time" content="2019-08-20T06:27:55.000Z">
+<meta property="article:modified_time" content="2020-05-21T06:50:23.793Z">
 <meta property="article:author" content="uroot">
+<meta property="article:tag" content="运维">
+<meta property="article:tag" content="ELK">
 <meta name="twitter:card" content="summary">
   
   
@@ -126,111 +132,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Kibana7-Visualize-添加nginx日志展示图形" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-05-20T15:22:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">第一篇文章</a>
+    <h1 class="article-title" itemprop="name">
+      Kibana7 Visualize 添加nginx日志展示图形
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">运维</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网络//" class="article-tag-list-link color3">网络</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网络/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网络/编程/运维//" class="article-tag-list-link color3">运维</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/" class="archive-article-date">
+        
+        <a href="/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/" class="archive-article-date">
   	<time datetime="2019-08-20T06:27:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/">Kibana7 Visualize 添加nginx日志展示图形</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>使用的Kibana7 fileter的语法与6有点差别</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">log_format json &#39;&#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;time&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;</span><br><span class="line">                     &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;</span><br><span class="line">                     &#39;&quot;status&quot;: &quot;$status&quot;, &#39;</span><br><span class="line">                     &#39;&quot;host&quot;: &quot;$host&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request&quot;: &quot;$request&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;</span><br><span class="line">                     &#39;&quot;uri&quot;: &quot;$request_uri&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot; &#39;</span><br><span class="line">                &#39;&#125;&#39;;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<p><strong>IP总数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metrics --&gt; aggregation 选择 Unique Count --&gt; Field 选择IP字段(remote_addr.keyword) --&gt; Custom label 写字段备注</span><br></pre></td></tr></table></figure>
+
+<p><strong>URL访问前100,排除静态资源地址</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metric --&gt; aggregation 选择 Count</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Feild 选择URL字段(uri.keyword) --&gt; Order by 选择 Count --&gt; Order Size 选择100 --&gt; Custom label 备注填写URL --&gt; Advanced 的 Exclude 排除静态资源 .png|.jpg|.js|.ico|.*css</span><br></pre></td></tr></table></figure>
+
+<p><strong>慢请求(高于5秒的请求)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择count</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram -- Field 选择 time(实际情况而定) -- Minimum interval 选择 Auto --&gt; Split series --&gt; Sub aggregation 选择 Filters --&gt; Filter 1 写条件 &quot;request_time &gt; 5&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>访问IP前100</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metrics --&gt; Aggregation选择Count --&gt; Custom label 写备注&quot;次数&quot;</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Field 选着IP字段&quot;remote_addr.keyword&quot; --&gt; Order by 选择 &quot;Metric:次数&quot; --&gt; Order Size 选100 --&gt; Custom label 备注写&quot;IP&quot;</span><br><span class="line">与上面一行同在一个Buckets--&gt; Split rows --&gt; Sub aggregation 选择 Terms --&gt; Field 选择IP城市字段&quot;geoip.city_name.keyword&quot; 这个是geoip插件解析出来的 --&gt; Order by 选择&quot;Metric:次数&quot; --&gt; Order Size 选择 Descending 100</span><br></pre></td></tr></table></figure>
+
+<p><strong>平均响应时间</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Average --&gt; Field 选择 请求时间字段&quot;request_time&quot; --&gt; Custom label 备注写 平均响应时间</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram --&gt; Field 选择 time(实际情况) --&gt; Minimum interval 选择 Auto</span><br></pre></td></tr></table></figure>
+
+<p><strong>总PV</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metric --&gt; Aggregation 选择 Count --&gt; Custom label 备注写 总PV</span><br></pre></td></tr></table></figure>
+
+<p><strong>总流量</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metric --&gt; Aggregation 选择 Sum --&gt; Field 选择请求大小字段 &quot;body_bytes_sent&quot; --&gt; Custom label标签写 总流量</span><br></pre></td></tr></table></figure>
+
+<p><strong>访问城市前20</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vertical Bar 图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Count --&gt; Custom label 标签写 数量</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Terms --&gt; Field 城市名称字段&quot;geoip_city_name.keyword&quot; --&gt; Order Size 选择 Descending 20 --&gt; Custom label 备注写 &quot;城市&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>访问情况</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Area 图形 </span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Count --&gt; Custom label 标签写 次数 Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram --&gt; Filed 选择 time(根据实际情况) -- Minimum interval 选择 Auto</span><br></pre></td></tr></table></figure>
+
+<p><strong>昨日今日访问对比</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Timelion 图形</span><br><span class="line">语句如下：</span><br><span class="line">.es(index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).title(昨日今日访问对比).color(#1E90FF).label(今日),</span><br><span class="line"></span><br><span class="line">.es(offset&#x3D;-24h,index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).lines(fill&#x3D;1,width&#x3D;0.5).color(gray).label(昨日)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -246,7 +208,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -259,17 +221,108 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/05/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -292,9 +345,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
