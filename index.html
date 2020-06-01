@@ -128,27 +128,31 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-win10-重装应用商店步骤" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">第一篇文章</a>
+      <a class="article-title" href="/2019/10/21/win10-%E9%87%8D%E8%A3%85%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%AD%A5%E9%AA%A4/">win10 重装应用商店步骤</a>
     </h1>
   
 
         
-        <a href="/2020/05/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-05-20T15:22:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+        <a href="/2019/10/21/win10-%E9%87%8D%E8%A3%85%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
+  	<time datetime="2019-10-21T14:39:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="这是第一篇文章"><a href="#这是第一篇文章" class="headerlink" title="这是第一篇文章"></a>这是第一篇文章</h1><p>测试文章排版</p>
+        <p>笔记本是小米笔记本，系统是win10家庭版（1709）。之前把系统里面可以卸载的软件都卸载掉了，包括win10应用商店。</p>
+<p>但是最近打算用这台笔记本来做python开发，打算试用下win10的内置的linux子系统。但是需要通过应用商店来安装linux发行版。</p>
+<p><strong>安装过程如下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 使用管理员权限打开PowerShell</span><br><span class="line">2. 使用Get-AppxPackage -allusers | Select Name, PackageFullName命令获取所有安装的应用</span><br><span class="line">3. 找到名称为Microsoft.WindowsStore的应用，复制对应的包名称</span><br><span class="line">我的包名称如下“Microsoft.WindowsStore_11706.1002.9.0_x64__8wekyb3d8bbwe”（每个版本的包名称不一样）</span><br><span class="line">4. 是用如下命令安装 “Add-AppxPackage -register &quot;C:Program FilesWindowsAppsMicrosoft.WindowsStore_11706.1002.9.0_x64__8wekyb3d8bbweAppxManifest.xml&quot; -DisableDevelopmentMode” （注意包名称）</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -162,15 +166,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">运维</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
         		</li>
       		
 		</ul>
@@ -182,15 +178,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/网络//" class="article-tag-list-link color3">网络</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网络/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网络/编程/运维//" class="article-tag-list-link color3">运维</a>
+        			<a href="/categories/系统//" class="article-tag-list-link color3">系统</a>
         		</li>
       		
 		</ul>
@@ -199,104 +187,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-20T15:01:27.328Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/21/win10-%E9%87%8D%E8%A3%85%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%AD%A5%E9%AA%A4/">展开全文 >></a>
         </p>
       
 
@@ -349,37 +240,12 @@
         <blockquote>
 <p>使用的Kibana7 fileter的语法与6有点差别</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">log_format json &#39;&#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;time&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;</span><br><span class="line">                     &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;</span><br><span class="line">                     &#39;&quot;status&quot;: &quot;$status&quot;, &#39;</span><br><span class="line">                     &#39;&quot;host&quot;: &quot;$host&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request&quot;: &quot;$request&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;</span><br><span class="line">                     &#39;&quot;uri&quot;: &quot;$request_uri&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot; &#39;</span><br><span class="line">                &#39;&#125;&#39;;</span><br></pre></td></tr></table></figure>
-
 <p><strong>IP总数</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metrics --&gt; aggregation 选择 Unique Count --&gt; Field 选择IP字段(remote_addr.keyword) --&gt; Custom label 写字段备注</span><br></pre></td></tr></table></figure>
 
 <p><strong>URL访问前100,排除静态资源地址</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metric --&gt; aggregation 选择 Count</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Feild 选择URL字段(uri.keyword) --&gt; Order by 选择 Count --&gt; Order Size 选择100 --&gt; Custom label 备注填写URL --&gt; Advanced 的 Exclude 排除静态资源 .png|.jpg|.js|.ico|.*css</span><br></pre></td></tr></table></figure>
-
-<p><strong>慢请求(高于5秒的请求)</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择count</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram -- Field 选择 time(实际情况而定) -- Minimum interval 选择 Auto --&gt; Split series --&gt; Sub aggregation 选择 Filters --&gt; Filter 1 写条件 &quot;request_time &gt; 5&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>访问IP前100</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metrics --&gt; Aggregation选择Count --&gt; Custom label 写备注&quot;次数&quot;</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Field 选着IP字段&quot;remote_addr.keyword&quot; --&gt; Order by 选择 &quot;Metric:次数&quot; --&gt; Order Size 选100 --&gt; Custom label 备注写&quot;IP&quot;</span><br><span class="line">与上面一行同在一个Buckets--&gt; Split rows --&gt; Sub aggregation 选择 Terms --&gt; Field 选择IP城市字段&quot;geoip.city_name.keyword&quot; 这个是geoip插件解析出来的 --&gt; Order by 选择&quot;Metric:次数&quot; --&gt; Order Size 选择 Descending 100</span><br></pre></td></tr></table></figure>
-
-<p><strong>平均响应时间</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Average --&gt; Field 选择 请求时间字段&quot;request_time&quot; --&gt; Custom label 备注写 平均响应时间</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram --&gt; Field 选择 time(实际情况) --&gt; Minimum interval 选择 Auto</span><br></pre></td></tr></table></figure>
-
-<p><strong>总PV</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metric --&gt; Aggregation 选择 Count --&gt; Custom label 备注写 总PV</span><br></pre></td></tr></table></figure>
-
-<p><strong>总流量</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metric --&gt; Aggregation 选择 Sum --&gt; Field 选择请求大小字段 &quot;body_bytes_sent&quot; --&gt; Custom label标签写 总流量</span><br></pre></td></tr></table></figure>
-
-<p><strong>访问城市前20</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vertical Bar 图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Count --&gt; Custom label 标签写 数量</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Terms --&gt; Field 城市名称字段&quot;geoip_city_name.keyword&quot; --&gt; Order Size 选择 Descending 20 --&gt; Custom label 备注写 &quot;城市&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>访问情况</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Area 图形 </span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择 Count --&gt; Custom label 标签写 次数 Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram --&gt; Filed 选择 time(根据实际情况) -- Minimum interval 选择 Auto</span><br></pre></td></tr></table></figure>
-
-<p><strong>昨日今日访问对比</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Timelion 图形</span><br><span class="line">语句如下：</span><br><span class="line">.es(index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).title(昨日今日访问对比).color(#1E90FF).label(今日),</span><br><span class="line"></span><br><span class="line">.es(offset&#x3D;-24h,index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).lines(fill&#x3D;1,width&#x3D;0.5).color(gray).label(昨日)</span><br></pre></td></tr></table></figure>
+        
       
 
       
@@ -447,6 +313,727 @@
 
 
   
+    <article id="post-VMware-vCenter-Converter-Standalone-Client迁移主机报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/09/VMware-vCenter-Converter-Standalone-Client%E8%BF%81%E7%A7%BB%E4%B8%BB%E6%9C%BA%E6%8A%A5%E9%94%99/">VMware vCenter Converter Standalone Client迁移主机报错</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/09/VMware-vCenter-Converter-Standalone-Client%E8%BF%81%E7%A7%BB%E4%B8%BB%E6%9C%BA%E6%8A%A5%E9%94%99/" class="archive-article-date">
+  	<time datetime="2019-07-09T07:15:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>搭建了一个新VMware VSAN延伸集群，需要旧集群的虚拟机迁移至新集群中，使用的工具是VMware vCenter Converter Standalone Client。</p>
+<p>在使用过程中碰到了两个问题。迁移的方式是热克隆的方式（source主机是powered on的状态)</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">故障处理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/运维//" class="article-tag-list-link color3">运维</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/09/VMware-vCenter-Converter-Standalone-Client%E8%BF%81%E7%A7%BB%E4%B8%BB%E6%9C%BA%E6%8A%A5%E9%94%99/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mongoDB使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/03/mongoDB%E4%BD%BF%E7%94%A8/">mongoDB使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/03/mongoDB%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2019-06-03T06:59:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>添加yum源<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF &gt;&gt;&#x2F;etc&#x2F;yum.repos.d&#x2F;mongodb-org-4.0.repo</span><br><span class="line">[mongodb-org-4.0]</span><br><span class="line">name&#x3D;MongoDB Repository</span><br><span class="line">baseurl&#x3D;https:&#x2F;&#x2F;repo.mongodb.org&#x2F;yum&#x2F;redhat&#x2F;$releasever&#x2F;mongodb-org&#x2F;4.0&#x2F;x86_64&#x2F;</span><br><span class="line">gpgcheck&#x3D;1</span><br><span class="line">enabled&#x3D;1</span><br><span class="line">gpgkey&#x3D;https:&#x2F;&#x2F;www.mongodb.org&#x2F;static&#x2F;pgp&#x2F;server-4.0.asc</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongoDB</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/mongoDB//" class="article-tag-list-link color3">mongoDB</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/mongoDB/数据库//" class="article-tag-list-link color4">数据库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/03/mongoDB%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Elasticsearch记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/01/Elasticsearch%E8%AE%B0%E5%BD%95/">Elasticsearch记录</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/01/Elasticsearch%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+  	<time datetime="2019-06-01T06:55:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>关闭分片自动迁移<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -XPUT http:&#x2F;&#x2F;127.0.0.1:9201&#x2F;_cluster&#x2F;settings -d &#39;&#123;</span><br><span class="line">    &quot;transient&quot; : &#123;</span><br><span class="line">        &quot;cluster.routing.allocation.enable&quot; : &quot;none&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;&#39;</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">elasticsearch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/elasticsearch//" class="article-tag-list-link color4">elasticsearch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/01/Elasticsearch%E8%AE%B0%E5%BD%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-elasticsearch-加入节点报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/30/elasticsearch-%E5%8A%A0%E5%85%A5%E8%8A%82%E7%82%B9%E6%8A%A5%E9%94%99/">elasticsearch 加入节点报错：same id but is a different node instance</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/30/elasticsearch-%E5%8A%A0%E5%85%A5%E8%8A%82%E7%82%B9%E6%8A%A5%E9%94%99/" class="archive-article-date">
+  	<time datetime="2019-04-30T07:46:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原本ES集群的设备出现问题下线，需要将备份的分片数据拷贝至备用节点然后上线备用服务器。但是启动的之后ES报错不能加入到集群。这个原因是有集群以及存在相同ID的节点。这个ES集群以及备用机的环境是同事配置安装的，所以具体情况也不太了解。有资料说需要清空ES data目录的数据，但是清空之后还是出现一样的情况。后面发现是由于ES配置了两个数据目录导致。只删除了其中一个目录的数据，另外一个目录还存在旧数据导致重启之后旧数据还是会被同步。同时清空两个数据目录的文件之后就可以了。</p>
+<p>我的实际操作没有删除data目录的所有文件，只是重命名了data目录的_state文件夹，重启重新生成之后就可以了。（路径如：/esdata/nodes/0/_state）</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">故障处理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/运维//" class="article-tag-list-link color3">运维</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/30/elasticsearch-%E5%8A%A0%E5%85%A5%E8%8A%82%E7%82%B9%E6%8A%A5%E9%94%99/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-使用脚本批量在linode克隆VPS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/04/%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E5%9C%A8linode%E5%85%8B%E9%9A%86VPS/">使用脚本批量在linode克隆VPS</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/04/%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E5%9C%A8linode%E5%85%8B%E9%9A%86VPS/" class="archive-article-date">
+  	<time datetime="2019-04-04T07:49:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用linode的VPS做代理服务，需要批量创建VPS。没有使用linode的api，直接使用python来操作linode-cli来达到目的。<br>逻辑很简单，使用subprocess模块执行linode-cli命令获取vps列表。根据vps的标签的名称最大值来计算出需要创建的vps的标签，然后通过计算出的标签创建VPS。VPS创建完成之后通过标签获取IP以及启动VPS。<br>脚本实质就是执行了一系列的shell命令，但是由于linode-cli支持json输出，所以使用python来实现比较方便。<br>脚本的使用前提是安装了<code>linode-cli</code>工具</p>
+<p>linode-cli使用参考: <a href="https://www.linode.com/docs/platform/api/using-the-linode-cli" target="_blank" rel="noopener">官网文档</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">pip install linode-cli</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置</span></span><br><span class="line">linode-cli configure</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/04/%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E5%9C%A8linode%E5%85%8B%E9%9A%86VPS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-elasticsearch合并集群导致一个索引丢失" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/26/elasticsearch%E5%90%88%E5%B9%B6%E9%9B%86%E7%BE%A4%E5%AF%BC%E8%87%B4%E4%B8%80%E4%B8%AA%E7%B4%A2%E5%BC%95%E4%B8%A2%E5%A4%B1/">elasticsearch合并集群导致一个索引丢失</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/26/elasticsearch%E5%90%88%E5%B9%B6%E9%9B%86%E7%BE%A4%E5%AF%BC%E8%87%B4%E4%B8%80%E4%B8%AA%E7%B4%A2%E5%BC%95%E4%B8%A2%E5%A4%B1/" class="archive-article-date">
+  	<time datetime="2019-03-26T07:52:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>接到合并两个集群节点(A,B)的任务，原本计划是将集群名称修改然后重启修改集群名称集群的所有节点，来将一个集群的节点都加入到另外的集群中。但是发现两个集群名称都是相同的，只是discovery.zen.ping.unicast.hosts列表不同。所以修改了discovery.zen.ping.unicast.hosts来合并两个集群。通过这种方法合并之后发现加入的节点的一个索引直接丢失了。</p>
+<p>这种方式合并集群相当于是在另外一个集群加节点而已，不会被删除数据。并且被删除的索引只在A集群存在，另外B集群是没有的。所以不会是索引冲突导致。</p>
+<p>怀疑是这个索引之前在B集群存在过，并且后面被删除了。所以A集群的节点加入B集群之后由于这个索引在B集群有删除记录，导致A加入B的所有节点的这个索引的分片直接被删除了。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">故障处理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/运维//" class="article-tag-list-link color3">运维</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/运维/elasticsearch//" class="article-tag-list-link color4">elasticsearch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/26/elasticsearch%E5%90%88%E5%B9%B6%E9%9B%86%E7%BE%A4%E5%AF%BC%E8%87%B4%E4%B8%80%E4%B8%AA%E7%B4%A2%E5%BC%95%E4%B8%A2%E5%A4%B1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-关于AWS的几个脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/25/%E5%85%B3%E4%BA%8EAWS%E7%9A%84%E5%87%A0%E4%B8%AA%E8%84%9A%E6%9C%AC/">关于AWS的几个脚本</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/25/%E5%85%B3%E4%BA%8EAWS%E7%9A%84%E5%87%A0%E4%B8%AA%E8%84%9A%E6%9C%AC/" class="archive-article-date">
+  	<time datetime="2019-03-25T07:57:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近在学习AWS的使用，由于一些特殊需求，需要了解AWS的python SDK包boto3的使用。根据需要写了几个用到的脚本。</p>
+</blockquote>
+<p>一、 <strong>S3断点续传脚本</strong>：</p>
+<p>使用了S3的分段上传的接口，增加了将记录断点信息来实现断点续传的功能。也可以在分段上传的基础上实现并发上传，可以参考<a href="https://ecloud.10086.cn/op-help-center/develop/S3%20Python%20SDK.pdf" target="_blank" rel="noopener">文档</a></p>
+<p>脚本的使用：修改用户及S3的信息，在最下面设置目录，默认会将文件夹下面的所有文件上传，已经上传的文件会写入到ok_list文件，避免重复上传。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">aws</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/25/%E5%85%B3%E4%BA%8EAWS%E7%9A%84%E5%87%A0%E4%B8%AA%E8%84%9A%E6%9C%AC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-iptables与firewalld使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/01/iptables%E4%B8%8Efirewalld%E4%BD%BF%E7%94%A8/">iptables与firewalld使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/01/iptables%E4%B8%8Efirewalld%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2019-03-01T06:51:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="iptables-使用"><a href="#iptables-使用" class="headerlink" title="iptables 使用"></a>iptables 使用</h2><h3 id="iptables基础"><a href="#iptables基础" class="headerlink" title="iptables基础"></a>iptables基础</h3><ul>
+<li>TCP三次握手：SYN、SYN ACK、ACK<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">TCP标记位：</span><br><span class="line">SYN: 同步标记位</span><br><span class="line">ACK：确认标记为（包括三次握手，四次挥手中确认及数据传输时的确认）</span><br><span class="line">RST：重置标记位（访问一个未打开的TCP端口时，服务器返回一个带RST标记位的响应）</span><br><span class="line">PSH：推标记位（需要低延时时的应用加PSH，比较快的发送出去，不往缓存中放，ssh,telnet)</span><br><span class="line">URG：紧急标志位（TCP的紧急方式是发送端向另一端发送紧急数据的一种方式。紧急指针包括向数据段的某个字节不进入接收缓冲就直接交给上层进程，余下的数据要进入接收缓冲。通信的时候网络故障问题引起的数据没传完，会发送一个URG标记位）</span><br><span class="line">FIN：结束标记位（发送端完成发送任务，双方都需要确认没有数据再发送给对方）</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iptables</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">firewalld</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/防火墙//" class="article-tag-list-link color4">防火墙</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/防火墙/安全//" class="article-tag-list-link color3">安全</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/01/iptables%E4%B8%8Efirewalld%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -532,23 +1119,91 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运维</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">zabbix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ELK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">故障处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">aws</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">存储</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">玩</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HAproxy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iptables</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">firewalld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">keepalived</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">H3C</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Kibana7 Visualize 添加nginx日志展示图形 | 记录日常 - 万物之中,希望最美。至美之物,永不凋零</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用的Kibana7 fileter的语法与6有点差别  123456789101112131415log_format json &#39;&amp;#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;                     &#39;&quot;time&quot;: &quot;$time_iso8601&amp;q">
+  <meta name="description" content="使用的Kibana7 fileter的语法与6有点差别  IP总数 12Metric图形Metrics --&gt; aggregation 选择 Unique Count --&gt; Field 选择IP字段(remote_addr.keyword) --&gt; Custom label 写字段备注  URL访问前100,排除静态资源地址 123Data Table 图形Metric --">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kibana7 Visualize 添加nginx日志展示图形">
 <meta property="og:url" content="http://yoursite.com/2019/08/20/Kibana7-Visualize-%E6%B7%BB%E5%8A%A0nginx%E6%97%A5%E5%BF%97%E5%B1%95%E7%A4%BA%E5%9B%BE%E5%BD%A2/index.html">
 <meta property="og:site_name" content="记录日常 - 万物之中,希望最美。至美之物,永不凋零">
-<meta property="og:description" content="使用的Kibana7 fileter的语法与6有点差别  123456789101112131415log_format json &#39;&amp;#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;                     &#39;&quot;time&quot;: &quot;$time_iso8601&amp;q">
+<meta property="og:description" content="使用的Kibana7 fileter的语法与6有点差别  IP总数 12Metric图形Metrics --&gt; aggregation 选择 Unique Count --&gt; Field 选择IP字段(remote_addr.keyword) --&gt; Custom label 写字段备注  URL访问前100,排除静态资源地址 123Data Table 图形Metric --">
 <meta property="og:locale" content="cn">
 <meta property="article:published_time" content="2019-08-20T06:27:55.000Z">
-<meta property="article:modified_time" content="2020-05-21T06:50:23.793Z">
+<meta property="article:modified_time" content="2020-05-21T08:21:10.647Z">
 <meta property="article:author" content="uroot">
 <meta property="article:tag" content="运维">
 <meta property="article:tag" content="ELK">
@@ -155,15 +155,15 @@
         <blockquote>
 <p>使用的Kibana7 fileter的语法与6有点差别</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">log_format json &#39;&#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;time&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;</span><br><span class="line">                     &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;</span><br><span class="line">                     &#39;&quot;status&quot;: &quot;$status&quot;, &#39;</span><br><span class="line">                     &#39;&quot;host&quot;: &quot;$host&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request&quot;: &quot;$request&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;</span><br><span class="line">                     &#39;&quot;uri&quot;: &quot;$request_uri&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot; &#39;</span><br><span class="line">                &#39;&#125;&#39;;</span><br></pre></td></tr></table></figure>
-
 <p><strong>IP总数</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Metric图形</span><br><span class="line">Metrics --&gt; aggregation 选择 Unique Count --&gt; Field 选择IP字段(remote_addr.keyword) --&gt; Custom label 写字段备注</span><br></pre></td></tr></table></figure>
 
 <p><strong>URL访问前100,排除静态资源地址</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Data Table 图形</span><br><span class="line">Metric --&gt; aggregation 选择 Count</span><br><span class="line">Buckets --&gt; Split rows --&gt; Aggregation 选择 Terms --&gt; Feild 选择URL字段(uri.keyword) --&gt; Order by 选择 Count --&gt; Order Size 选择100 --&gt; Custom label 备注填写URL --&gt; Advanced 的 Exclude 排除静态资源 .png|.jpg|.js|.ico|.*css</span><br></pre></td></tr></table></figure>
 
-<p><strong>慢请求(高于5秒的请求)</strong></p>
+<a id="more"></a>
+
+<p>慢请求(高于5秒的请求)**</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Line图形</span><br><span class="line">Metrics --&gt; Y-axis --&gt; Aggregation 选择count</span><br><span class="line">Buckets --&gt; X-axis --&gt; Aggregation 选择 Date Histogram -- Field 选择 time(实际情况而定) -- Minimum interval 选择 Auto --&gt; Split series --&gt; Sub aggregation 选择 Filters --&gt; Filter 1 写条件 &quot;request_time &gt; 5&quot;</span><br></pre></td></tr></table></figure>
 
 <p><strong>访问IP前100</strong></p>
@@ -186,6 +186,11 @@
 
 <p><strong>昨日今日访问对比</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Timelion 图形</span><br><span class="line">语句如下：</span><br><span class="line">.es(index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).title(昨日今日访问对比).color(#1E90FF).label(今日),</span><br><span class="line"></span><br><span class="line">.es(offset&#x3D;-24h,index&#x3D;nginx-log-*, timefield&#x3D;&#39;time&#39;, metric&#x3D;&#39;count:uri&#39;).lines(fill&#x3D;1,width&#x3D;0.5).color(gray).label(昨日)</span><br></pre></td></tr></table></figure>
+
+<p><strong>日志格式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">log_format json &#39;&#123; &quot;@timestamp&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;time&quot;: &quot;$time_iso8601&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;</span><br><span class="line">                     &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;</span><br><span class="line">                     &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;</span><br><span class="line">                     &#39;&quot;status&quot;: &quot;$status&quot;, &#39;</span><br><span class="line">                     &#39;&quot;host&quot;: &quot;$host&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request&quot;: &quot;$request&quot;, &#39;</span><br><span class="line">                     &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;</span><br><span class="line">                     &#39;&quot;uri&quot;: &quot;$request_uri&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;</span><br><span class="line">                     &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot; &#39;</span><br><span class="line">                &#39;&#125;&#39;;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -283,15 +288,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/21/win10-%E9%87%8D%E8%A3%85%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%AD%A5%E9%AA%A4/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          win10 重装应用商店步骤
         
       </div>
     </a>
   
+  
+    <a href="/2019/07/09/VMware-vCenter-Converter-Standalone-Client%E8%BF%81%E7%A7%BB%E4%B8%BB%E6%9C%BA%E6%8A%A5%E9%94%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VMware vCenter Converter Standalone Client迁移主机报错</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -407,23 +417,91 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运维</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">zabbix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ELK</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">故障处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">aws</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">存储</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">玩</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HAproxy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iptables</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">firewalld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">keepalived</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">H3C</a>
               </li>
             
             <div class="clearfix"></div>
